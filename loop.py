@@ -9,3 +9,17 @@ My_List.append("fruits")
 
 for item in My_List:
     print(item)
+
+    #indexing is [i]
+
+    # and index is i
+
+    #example
+
+for i in [0,1,2,3]:
+    print(My_List[i])
+
+    # or
+
+for i in range(4): # n -1 = 3 so it is same as 0 ,1 , 2,3
+    print(My_List[i])
