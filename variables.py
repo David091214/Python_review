@@ -38,3 +38,10 @@ if z: # here z is a variable saying True
 
 if 4 > 3:
     print ("example 2")
+
+ # a simple variable to hold list of items 
+My_List = ["apple", "orange", "fish"]
+print(My_List)
+
+ # append to the list of items 
+My_List.append("fruits")
