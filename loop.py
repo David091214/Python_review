@@ -23,3 +23,7 @@ for i in [0,1,2,3]:
 
 for i in range(4): # n -1 = 3 so it is same as 0 ,1 , 2,3
     print(My_List[i])
+
+# we can also conver range(4) to a list 
+list(range(4))
+list(range(len(My_List)))
