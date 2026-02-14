@@ -73,18 +73,75 @@ class LinkedList:
 
         def get(self, value):
             curr = self.head
-            count = 0
+            if curr.next == None:
+                print("no value in the list")
+            else:
+                curr = curr.next
+                count = 0 
+                while curr != None:
+                    if curr.val ==value:
+                        print(f"value {value } is at index {count}")
+                        return count 
+                    else:
+                        curr = curr.next 
+                        count +=1
 
-            while curr != None:
-                                    
-                if curr.val == value:
-                  print(f"value {value} is at index {count}")
-                  return count
+        def erase(self,index):
+                curr = self.head
+                if curr.next == None:
+                    print ("no value in the list")
                 else:
-                 curr = curr.next
-                 count += 1
-            print("value not in the list")  
-                        
+                    curr = curr.next
+                    prev = self.head
+                    count = 0
+                    while curr != None:
+                        if index >= self.length():
+                            print("index out of range, try something smaller")
+                            return
+                        else:
+                            while count != index:
+                                prev = curr
+                                curr=curr.next
+                                count +=1
+                            else:
+                                print(f"value {curr.val} at index {index} is deleted")
+                                prev.next = curr.next
+                                curr = None
+                              
+                                return
+
+            # curr = self.head
+            # count = 0
+
+            # while curr != None:
+                                    
+            #     if curr.val == value:
+            #       print(f"value {value} is at index {count}")
+            #       return count
+            #     else:
+            #      curr = curr.next
+            #      count += 1
+            # print("value not in the list")  
+
+        def get_value_at_index(self, index):
+            curr = self.head
+            if  curr is None:
+                print("no value in the list")
+            else:
+                curr = curr.next
+                if index >= self.length():
+                    print("index out of range, try something smaller")
+                else :
+                    count =0
+                    while curr != None:
+                        if count == index:
+                            print(f"value at index {index} is {curr.val}")
+                            return curr.val
+                        else:
+                            curr = curr.next
+                            count += 1
+                
+
                 
                          
 
@@ -99,7 +156,10 @@ myL.add(2)
 
 myL.display()
 myL.get(2)
+myL.get_value_at_index(2)
 
+myL.erase(3)
+myL.display()
              
 
 # a = node(5)
