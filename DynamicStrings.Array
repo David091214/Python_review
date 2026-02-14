@@ -1,0 +1,8 @@
+B = 'hello'
+print(B)
+
+
+c = B + " z"
+print(c)
+
+ 
